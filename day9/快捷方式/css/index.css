@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 800px;
+    margin: auto;
+}
+dl {
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+}
+
+dl b {
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+dl dd {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+dl dd img {
+    width: 100%;
+    height: 100%;
+}
+
+dl dt {
+    text-align: center;
+}
+
+dl:hover b {
+    display: block;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+.content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    border-radius: 25px;
+}
+
+.content input {
+    width: 320px;
+    height: 36px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+.close,
+.finish {
+    float: right;
+}
+
+.content button {
+    padding: 6px 12px;
+    margin: 0 4px;
+}
+
+p {
+    display: none;
+}

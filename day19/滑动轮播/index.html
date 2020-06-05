@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 800px;
+            height: 400px;
+            margin: auto;
+        }
+        .banner {
+            width: 800px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .container {
+            width: 10000px;
+            height: 400px;
+            ;
+        }
+
+        .container img {
+            width: 800px;
+            height: 400px;
+            float: left;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 36px;
+            color:#fff;
+        }
+        .next{
+            right:0
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="banner">
+            <div class="container">
+                <img src="img/1.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+                <img src="img/5.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="prev"><</div>
+            <div class="next">></div>
+        </div>
+    </div>
+
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

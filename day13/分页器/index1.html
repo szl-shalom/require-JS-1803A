@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 500px;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        ul {
+            text-align: center;
+        }
+
+        ul li {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+        }
+
+        ul li.active {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>18</td>
+                    <td>男</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="page">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

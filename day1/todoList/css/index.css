@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+.wrap{
+    width:500px;
+    margin: auto;
+}
+
+h1 b{
+    float: right;
+}
+
+ul li b{
+    float: right;
+}
+
+ul li{
+    line-height: 40px;
+    border-bottom:1px solid #ccc;
+}

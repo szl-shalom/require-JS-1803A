@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+table tr {
+    height: 36px;
+}
+
+.box {
+    text-align: center;
+}
+
+.page {
+    display: inline-block;
+    height: 36px;
+    margin-top: 20px;;
+}
+
+.page li {
+    display: inline-block;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    line-height: 36px;
+}
+
+.page li.active {
+    background: red;
+    color: #fff;
+}
+
+.right {
+    /* display: inline-block; */
+    float: right;
+    margin-top: 20px;;
+}
+
+.sel {
+    height: 36px;
+}
+
+.box button {
+    height: 36px;
+    padding: 0 12px;
+}
+
+.ipt{
+    /* width:60px; */
+    height:36px;
+}

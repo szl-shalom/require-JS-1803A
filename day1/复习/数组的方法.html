@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var arr = [1, 2, 3, 4, 5, 6], ul = document.querySelector("ul");
+        // map 语法：数组的方法，遍历数组，返回值是一个新数组，新数组的长度
+        // 和原数组保持一致，新数组放着每一次回调函数的返回值
+        // 一般情况下做渲染比较多
+        // var res = arr.map(function (item) {
+        //     return `<li>${item}</li>`
+        // }).join("")
+        // ul.innerHTML = res;
+
+        // filter 语法：数组的方法，遍历数组，返回值是一个新数组，
+        // 新数组放着每一次回调函数返回值为真的元素
+        // 数据筛选 + 模糊搜索
+        var res = arr.filter(function (item) {
+            return item - 3   //-2  -1  0  1  2  3
+        })
+        console.log(res)  //=> [1,2,4,5,6]
+
+        // some:语法：数组的方法,遍历数组，返回值是一个布尔值
+        // 如果存在一次回调函数返回值为真  那么some返回值为真  否则为假
+        // var res = arr.some(function () {
+        //     return 1
+        // })
+        // console.log(res)
+
+        // every:语法：数组的方法,遍历数组，返回值是一个布尔值
+        // 如果每一次回调函数返回值都为真  那么some返回值为真  否则为假
+        // var res = arr.every(function (item) {
+        //     return item - 3    // -2 -1 0 1 2 3
+        // })
+        // console.log(res)
+
+        // reduce:
+        // 语法：参数一个的时候
+        // a 代表数组的第一个元素
+        // b 代表数组的第二个元素
+        // 循环遍历，把每一次遍历的结果赋值 a 
+        // b继续往后遍历
+        // 语法：参数二个的时候
+
+        // var arr = [1, 2, 3, 4, 5, 6];
+        // var res = arr.reduce(function (a, b) {
+        //     return a + b; // =>6
+        // })
+        // console.log(res)
+    </script>
+</body>
+
+</html>

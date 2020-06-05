@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.floor li{
+    background: gray;
+    height:600px;
+    width:100%;
+    text-align: center;
+    line-height: 600px;
+    font-size: 100px;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+}
+
+.list {
+    position: fixed;
+    top:50%;
+    transform: translate(0,-50%);
+    left:20px;
+}
+
+.list li{
+    background: blueviolet;
+    border-bottom:1px solid #ccc;
+    width:120px;
+    height:36px;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 6px;
+    opacity: .3;
+}
+
+.list li.active{
+    opacity: 1;
+}
+
+body{
+    height:5000px;
+}

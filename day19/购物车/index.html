@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>
+                        全选
+                        <input type="checkbox" class="check-all">
+                    </th>
+                    <th>
+                        商品名称
+                    </th>
+                    <th>
+                        单价
+                    </th>
+                    <th>
+                        数量
+                    </th>
+                    <th>
+                        小计
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="check-one">
+                    </td>
+                    <td>
+                        小米10PRO
+                    </td>
+                    <td class="price">
+                        3999
+                    </td>
+                    <td>
+                        <button class="red">-</button>
+                        <span class="num">2</span>
+                        <button class="add">+</button>
+                    </td>
+                    <td class="litPrice">
+                        7998
+                    </td>
+                    <td>
+                        <button class="del">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="check-one">
+                    </td>
+                    <td>
+                        小米10PRO
+                    </td>
+                    <td class="price">
+                        3999
+                    </td>
+                    <td>
+                        <button class="red">-</button>
+                        <span class="num">2</span>
+                        <button class="add">+</button>
+                    </td>
+                    <td class="litPrice">
+                        7998
+                    </td>
+                    <td>
+                        <button class="del">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="check-one">
+                    </td>
+                    <td>
+                        小米10
+                    </td>
+                    <td class="price">
+                        3000
+                    </td>
+                    <td>
+                        <button class="red">-</button>
+                        <span class="num">2</span>
+                        <button class="add">+</button>
+                    </td>
+                    <td class="litPrice">
+                        6000
+                    </td>
+                    <td>
+                        <button class="del">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="check-one">
+                    </td>
+                    <td>
+                        小米10PRO
+                    </td>
+                    <td class="price">
+                        1000
+                    </td>
+                    <td>
+                        <button class="red">-</button>
+                        <span class="num">4</span>
+                        <button class="add">+</button>
+                    </td>
+                    <td class="litPrice">
+                        4000
+                    </td>
+                    <td>
+                        <button class="del">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>
+            <span class="result">
+                总价：0元
+                总数量：0
+            </span>
+            <button class="del-all">批量删除</button>
+        </h1>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

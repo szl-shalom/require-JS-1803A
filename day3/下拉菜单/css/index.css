@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+ul {
+    width: 160px;
+    background: #263238;
+    padding-left: 30px;
+    color: #fff;
+}
+
+ul > li > ol {
+    padding-left: 30px;
+}
+
+ul li b {
+    float: right;
+    margin-right: 20px;
+    /* transform: rotateZ(90deg); */
+}
+
+ol {
+    display: none;
+    background: #1F282D;
+}

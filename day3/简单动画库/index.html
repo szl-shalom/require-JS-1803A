@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/velocity.min.js"></script>
+    <style>
+        .box {
+            background: red;
+            width: 200px;
+            height: 200px;
+            margin-left: 200px;
+            margin-top: 200px;
+            /* transform: scale(); */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var V = Velocity, box = document.querySelector(".box");
+        // 语法：标准语法
+        // V(元素节点,过渡后的css样式对象,配置对象)
+        // 默认单位px,属性名称是多个单词连接在一起的时候，建议使用小驼峰;
+        // V(box, {
+        //     width: [500, 100],
+        //     height: [500, 100],
+        //     borderRadius: "50%",
+        //     marginLeft: "100px",
+        //     "margin-top": 200,
+        // }, {
+        //     duration: 5000,//动画时长
+        //     begin: function () { //动画开始之前执行
+        //         console.log("动画开始了")
+        //     },
+        //     complete: function () { //动画结束之后执行
+        //         console.log("动画结束了")
+        //     },
+        //     progress: function () { //动画执行中函数
+        //         console.log("动画正在执行")
+        //     },
+        //     // loop: true, //数字：代表循环两次 ， 布尔值true 代表无线循环
+        //     // delay: 1000,//动画延迟1s执行
+        //     easing: "linear", //动画方式
+        //     display: "none",//当动画执行完毕的时候 设置display
+        // })
+        // 关键字语法
+        // V(元素节点，关键字，配置对象)
+        // V(box, "fadeOut", 5000); //淡出动画
+        // V(box, "fadeIn", 5000); //淡入动画
+        // V(box, "slideUp", 2000);//收起动画
+        // V(box, "slideDown", 2000);//下拉动画
+
+        // transform
+        // V(box, {
+        //     // rotateZ: "360deg" //渲染
+        //     // skewX: "-30deg"//倾斜角度
+        //     // scale: 3 //缩放比例  默认是1
+        // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .title {
+            float: left;
+            width: 220px;
+        }
+
+        .title span {
+            display: inline-block;
+            width: 220px;
+            height: 60px;
+            line-height: 60px;
+            ;
+            text-align: center;
+        }
+
+        .title span.active {
+            background: red;
+        }
+
+        .underLine {
+            height: 60px;
+            float: left;
+            width: 2px;
+            background: red;
+            margin: 0 20px;
+            transition: margin-top .5s;
+        }
+
+        .content {
+            float: left;
+
+        }
+
+        .content img {
+            width: 500px;
+            height: 300px;
+            display: none;
+        }
+
+        .content img.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="title">
+            <span class="active">标题1</span>
+            <span>标题2</span>
+            <span>标题3</span>
+            <span>标题4</span>
+        </div>
+        <i class="underLine"></i>
+        <div class="content">
+            <img src="img/1.jpg" alt="" class="active">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+        </div>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

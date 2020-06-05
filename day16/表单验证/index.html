@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var reg = /正则表达式主体/修饰符
+
+        // 修饰符
+        // i  忽略大小写
+        // g  全局匹配
+        // m  多行匹配
+
+        // 元字符
+        // \d 代表数字0-9
+        // \w 代表数字 字母 下划线
+        // \s 匹配空白字符
+        // \b 匹配单词边界
+        // \D 匹配非数字
+
+        // 限定词
+        // ^  匹配开头
+        // $  匹配结尾
+
+        // 模式
+        // [4-9]  匹配4-9任意数字
+        // [a-zA-z0-9_]  匹配 字母 数字 下划线  === \w
+        // [0-9] 匹配0-9之间任意数字 \d
+        // [^0-9]  匹配非0-9之间的任意字符  \D
+
+        // 量词
+        // n*  匹配0个或一个或多个n
+        // n?  匹配0个或一个n
+        // n+  匹配一个或多个n
+        // n{5}  匹配5个n
+        // n{5,} 匹配至少5个n
+        // n{5,8} 匹配5-8个n
+
+
+        // 手机号
+        // 13171996138
+        var telReg = /^1[3-8]\d{9}$/
+        // 邮箱
+        // 906446244@qq.com
+        var emailReg = /\w+@\w+\.(com|net|cn)/
+        // 姓名 
+        // 史志龙
+        var nameReg = /[\u4e00-\u9fa5]{2,4}/
+
+        var res = nameReg.test("史志龙");
+        console.log(res)
+        // 方法
+        // 如果字符串符合当前表达式的规则，那么返回true
+        // 如果字符串符合当前表达式的规则，那么返回false
+        // RegExp.test("需要验证的字符串")
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title span {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+
+        }
+
+        .title span.active {
+            background: red;
+            color: #fff;
+
+        }
+
+        .content div {
+            display: none;
+        }
+
+        .content div.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="title">
+            <span>标题1</span>
+            <span>标题2</span>
+            <span>标题3</span>
+        </div>
+
+        <div class="content">   
+            <div>内容1</div>
+            <div>内容2</div>
+            <div class="active">内容3</div>
+        </div>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

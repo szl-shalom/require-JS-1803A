@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.banner {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 4000px;
+    height: 500px;
+    transition: all 0.5s;
+}
+
+.slide {
+    background: tomato;
+    width: 800px;
+    height: 500px;
+    float: left;
+    line-height: 500px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    color: #fff;
+}
+.slide:nth-child(even) {
+    background: skyblue;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.next{
+    right:0;
+}

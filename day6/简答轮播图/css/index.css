@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+.swiper {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.container {
+    width: 5000px;
+    position: absolute;
+    left: 0px;
+}
+.container img {
+    width: 1000px;
+    height: 600px;
+    float: left;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.next {
+    right: 0;
+}
+
+.page {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.page li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0 10px;
+}
+
+.page li.active {
+    background: red;
+}

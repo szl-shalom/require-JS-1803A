@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .list>ul {
+            height: 300px;
+            overflow: auto;
+        }
+
+        .list>ul ul {
+            padding-left: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="selected"></div>
+        <div class="list">
+            <input type="text">
+            <ul>
+                <!-- <li>
+                    <img src="img/close.png" alt="">
+                    <input type="checkbox">
+                    <span>山西</span>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            <span>太原</span>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <span>大同</span>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+            <div><button>确定</button></div>
+        </div>
+    </div>
+</body>
+<script src="require.js" data-main="js/main"></script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script src="./lib/require.js" data-main="main.js"></script>
+    <script>
+        var str = "111122222222233333556788";
+        function getMaxLen(str) {
+            var maxLen = 0, code = str[0];
+            for (var i = 0; i < str.length; i++) {
+                if (maxLen < str.split(str[i]).length - 1) {
+                    maxLen = str.split(str[i]).length - 1;
+                    code = str[i]
+                }
+            }
+            return {
+                maxLen,
+                code,
+            }
+        }
+        var res = getMaxLen(str);
+        console.log(res)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //面向对象（思想）
+
+        // 构造函数
+        function Fun(opt) {
+            // 合并对象
+            // Object.assign(obj1, obj2, obj3,......)
+            // 从函数的第二个参数起  开始依次合并到参数1身上
+            Object.assign(this, {
+                // 默认参数
+                name: "李四"
+            }, opt)
+            // 初始化
+            this.init()
+        }
+        // 修改原型  （每一个实例化对象共享）
+        Fun.prototype = {
+            constructor: Fun,
+            init: function () {
+                this.say();//调用say方法
+            },
+            say: function () {
+                console.log(`我叫${this.name}，年龄${this.age}岁了`)
+
+
+            }
+        }
+
+
+        // 实例化对象
+        var res = new Fun({
+            // 实际参数
+            age: 19,
+            name: "王五"
+        });
+
+        // 实例化对象
+        new Fun({
+            age: 99
+        })
+
+        var a = 1;
+        var b = 2;
+        var b = 2;
+
+
+
+
+    </script>
+</body>
+
+</html>

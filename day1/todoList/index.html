@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        todoList:<input type="text" class="ipt">
+        <div class="box">
+            <h1>
+                正在进行
+                <b class="header-num">1</b>
+            </h1>
+            <ul class="header-ul">
+                <li>
+                    <input type="checkbox">
+                    <span>item1</span>
+                    <b>X</b>
+                </li>
+            </ul>
+
+            <h1>
+                已经完成
+                <b class="bottom-num">2</b>
+            </h1>
+            <ul class="bottom-ul">
+                <li>
+                    <input type="checkbox" checked>
+                    <span>item1</span>
+                    <b>X</b>
+                </li>
+                <li>
+                    <input type="checkbox" checked>
+                    <span>item2</span>
+                    <b>X</b>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="./lib/require.js" data-main="main.js"></script>
+</body>
+
+</html>

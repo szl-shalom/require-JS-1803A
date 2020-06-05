@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function ObserverableArray(arr) {
+        //     this.arr = arr;
+        // }
+        // ObserverableArray.prototype = {
+        //     constructor: ObserverableArray,
+        //     push(par) {
+        //         console.log("push");
+        //         this.arr[this.arr.length] = par;
+        //         return this.arr.length;
+        //     }
+        // }
+
+
+        // var arr = new ObserverableArray([]);
+        // var res = arr.push(1)
+        // console.log(res)
+
+
+        var arr1 = [1];
+        var arr2 = CloneData1(arr1);
+        arr1.push(2)
+        console.log(arr2)
+
+        function CloneData(data) {
+            if (typeof data !== "object") {
+                return data
+            }
+            var flag = Object.prototype.toString.call(data) === "[object Object]";
+            var res = flag ? {} : [];
+            if (flag) {
+                for (var i in data) {
+                    res[i] = CloneData(data[i])
+                }
+            } else {
+                data.forEach(function (item, index) {
+                    res[index] = CloneData(item)
+                })
+            }
+            return res;
+        }
+
+        function CloneData1(data) {
+            return JSON.parse(JSON.stringify(data))
+        }
+
+    </script>
+</body>
+
+</html>

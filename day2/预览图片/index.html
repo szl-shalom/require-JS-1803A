@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 25px;
+            /* 上下左右居中 */
+            /* position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 500px;
+            height: 500px; */
+
+            /* 上下左右居中 */
+            /* left: 50%;
+            top: 50%;
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            margin-left: -150px;
+            margin-top: -150px; */
+
+            /* 上下左右居中 */
+            left: 50%;
+            top: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+        }
+        .content img {
+            width: 500px;
+            height: 500px;
+        }
+        .content b {
+            /* display: block; */
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <img src="img/5.jpg" alt="">
+
+
+    <!-- <div class="mask"></div>
+    <div class="content">
+        <img src="img/1.jpg" alt="">
+        <b>X</b>
+    </div> -->
+    <!-- 引入require.js  指定入口文件 -->
+    <!-- require.js默认情况加载的文件就是JS文件  如果你不写文件后缀名 那么require会帮你加一个后缀名.js-->
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+require
+define
+data-main
+
+baseUrl
+paths
+shim
+exports
+
+一个单词20遍   手写

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress {
+            width: 500px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 25px;
+            margin: 150px auto;
+            position: relative;
+        }
+
+        .box {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background: gray;
+            position: absolute;
+            top: -15px;
+        }
+
+        .box.active {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background: gray;
+            position: absolute;
+            top: -15px;
+        }
+
+        .box.active1 {
+            border-radius: 0;
+            width: 20px;
+            height: 50px;
+            background: gray;
+            position: absolute;
+            top: -15px;
+        }
+
+        .mask {
+            width: 0;
+            height: 100%;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress">
+        <div class="box"></div>
+        <div class="mask"></div>
+    </div>
+    <select name="" id="">
+        <option value="active">样式一</option>
+        <option value="active1">样式二</option>
+    </select>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

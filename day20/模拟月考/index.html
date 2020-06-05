@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th class="del-all">全部取消</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>商品1</th>
+                    <th class="price">205</th>
+                    <th>
+                        <button class="red">-</button>
+                        <span class="num">2</span>
+                        <button class="add">+</button>
+                    </th>
+                    <th class="litPrice">410</th>
+                    <th class="del">取消</th>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="result">
+            总价：0
+            总数量:0
+        </h1>
+        <script src="./lib/require.js" data-main="main"></script>
+    </div>
+
+
+    <!-- <div class="mask"></div>
+    <div class="content">
+        <h1>确认要删除吗 
+            <b>X</b>
+        </h1>
+        <button>确定</button><button>取消</button>
+    </div> -->
+</body>
+
+</html>

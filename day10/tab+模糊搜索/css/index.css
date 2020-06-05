@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 500px;
+    margin: auto;
+}
+
+.header {
+    line-height: 80px;
+}
+
+.user-search {
+    width: 260px;
+    height: 36px;
+}
+.title {
+    float: right;
+}
+.title button {
+    height: 36px;
+    padding: 0 16px;
+}
+
+.title button.active {
+    background: tomato;
+    color: #fff;
+}
+
+dl {
+    width: 100%;
+    padding: 10px;
+    height: 100px;
+}
+
+dl dd {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+dl dd img {
+    width: 100%;
+    height: 100%;
+}
+
+dl dt {
+    width:200px;
+    float: left;
+    margin-left: 20px;;
+}

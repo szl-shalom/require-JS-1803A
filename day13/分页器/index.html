@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 举个栗子
+        var arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"];
+        //          0    1    2    3    4    5    6    7    8    9    10   11
+
+
+        // slice 第一个参数是开始截取下标
+        // slice 第二个参数是终止截取下标
+        // 注意: 截图包含开始下标  不包含终止下标
+        //                                  页码    index    num
+        // 获取 ["a","b","c"]     用slice   第1组    下标0   3位一组   
+        arr.slice(0, 3)                          //       0  = 0 * 3
+        // 获取 ["d","e","f"]     用slice   第2组    下标1   3位一组
+        arr.slice(3, 6)                          //       3 =  1 * 3
+        // 获取 ["g", "h", "i"]   用slice   第3组    下标2   3位一组
+        arr.slice(6, 9)                          //       6 = 2 * 3
+        // 获取 ["j", "k", "l"]   用slice   第4组    下标3   3位一组
+        arr.slice(9, 12)                          //      9 = 3 * 3
+
+
+        // 获取对应数据
+        // data 大数据
+        // num  每页显示几条数据
+        // index  下标
+        //             起止下标         终止下标
+        // 核心：
+        //  data.slice(index * num, (index+ 1) * num )
+
+        // 获取最大的页码
+        // data.length 数据的长度
+        // num每页显示几条数据
+        // Math.ceil(data.length / num)
+   
+    </script> 
+</body>
+
+</html>

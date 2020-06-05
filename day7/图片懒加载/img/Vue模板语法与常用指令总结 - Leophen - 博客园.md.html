@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.cnblogs.com/Leophen/p/11251757.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta property="og:description" content="Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。在底层的实现上，Vue 将模板编译成虚拟 DOM 渲染函数，结合相应系统，在应用状态改变时">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue模板语法与常用指令总结 - Leophen - 博客园</title>
+    
+    <link rel="stylesheet" href="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/bundle-simplememory.min.css">
+    <link type="text/css" rel="stylesheet" href="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/custom.css">
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/bundle-SimpleMemory-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/Leophen/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/Leophen/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/Leophen/wlwmanifest.xml">
+    <script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/amp4ads-host-v0.js.下载"></script><script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/pubads_impl_rendering_2020032401.js.下载"></script><script async="" src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/analytics.js.下载"></script><script type="text/javascript" src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/encoder.js.下载"></script><script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/blog-common.min.js.下载"></script>
+    <script>
+        var currentBlogId = 524987;
+        var currentBlogApp = 'Leophen';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    
+    
+    
+<link rel="preload" href="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/f.txt" as="script"><script type="text/javascript" src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/f.txt"></script><script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/pubads_impl_2020032401.js.下载" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/Leophen/"><img id="blogLogo" src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/Leophen/">Leophen</a>
+</h1>
+<h2>
+Web Front-end &amp; A Designer
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/Leophen/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Leophen">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+105&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+6</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/Leophen/p/11251757.html">Vue模板语法与常用指令总结</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><span style="color: #008080;">Vue.js</span> 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。在底层的实现上，Vue 将模板编译成虚拟 DOM 渲染函数，结合相应系统，在应用状态改变时，Vue 可以智能地计算出重新渲染组件的最小代价并应用到 DOM 操作上。</p>
+<p>&nbsp;</p>
+<h2 id="autoid-0-0-0">一、插值</h2>
+<h3 id="autoid-1-0-0">1、文本</h3>
+<p>数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>{{message}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>使用 <span style="color: #800000;">v-once</span> 指令，可以执行一次插值，后面如果有改变，将不会更新：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p </span><span style="color: #ff0000;">v-once</span><span style="color: #0000ff;">&gt;</span>{{message}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&nbsp;</p>
+<h3 id="autoid-1-1-0">2、HTML</h3>
+<p>使用 <span style="color: #800000;">v-html</span> 指令，可以插入 HTML 代码，示例如下：</p>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    message: </span><span style="color: #800000;">'</span><span style="color: #800000;">&lt;h1&gt;一级标题&lt;/h1&gt;</span><span style="color: #800000;">'</span><span style="color: #000000;">
+  }
+})</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>未使用 v-html 指令时：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>{{message}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 运行结果 </span><span style="color: #008000;">--&gt;<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190726154054546-1755869942.png" alt="" width="147" height="34"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>使用 v-html 指令后：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-html</span><span style="color: #0000ff;">="message"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 运行结果 </span><span style="color: #008000;">--&gt;<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190726152212678-683951054.png" alt="" width="98" height="38"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<h3 id="autoid-1-2-0">3、属性</h3>
+<p>使用 <span style="color: #800000;">v-bind</span> 指令，可以将 Mustache 语法作用在 HTML 属性中</p>
+<p>CSS 代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #800000;">.red</span>{<span style="color: #ff0000;">
+  color</span>:<span style="color: #0000ff;"> red</span>;
+}</pre>
+</div>
+<p>HTML 代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p </span><span style="color: #ff0000;">v-bind:class</span><span style="color: #0000ff;">="{'red': temp}"</span><span style="color: #0000ff;">&gt;</span>颜色<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+    el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data:{
+      temp: </span><span style="color: #0000ff;">true</span><span style="color: #000000;">
+  }
+});</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<h3 id="autoid-1-3-0">4、JavaScript 表达式</h3>
+<p>对于所有的数据绑定，<span style="color: #008080;">Vue.js</span> 都提供了完全的 JavaScript 表达式支持</p>
+<p>HTML 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>{{1+1}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>{{ok?'YES':'NO'}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>{{message.split('').reverse().join('')}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-bind:id</span><span style="color: #0000ff;">="'list-' + id"</span><span style="color: #0000ff;">&gt;</span>我的id是list-1<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    ok: </span><span style="color: #0000ff;">true</span><span style="color: #000000;">,
+    message: </span><span style="color: #800000;">'</span><span style="color: #800000;">RUNOOB</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+    id : </span><span style="color: #800080;">1</span><span style="color: #000000;">
+  }
+})</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 id="autoid-1-4-0">二、常用指令</h2>
+<p>指令是带有 v- 前缀的特殊属性，用于在表达式的值改变时，将某些行为应用到 DOM 上，常见的指令如下：</p>
+<ul>
+<li>
+<h3 id="autoid-2-0-0">v-once</h3>
+</li>
+<li>
+<h3 id="autoid-2-1-0">v-html</h3>
+</li>
+<li>
+<h3 id="autoid-2-2-0">v-bind</h3>
+</li>
+</ul>
+<p>使用 <span style="color: #800000;">v-bind</span> 指令绑定属性</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">v-bind:[attributeName]</span><span style="color: #0000ff;">="url"</span><span style="color: #0000ff;">&gt;</span> ... <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>示例：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">v-bind:href</span><span style="color: #0000ff;">="url"</span><span style="color: #0000ff;">&gt;</span>...<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>简写：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">:href</span><span style="color: #0000ff;">="url"</span><span style="color: #0000ff;">&gt;</span>...<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-3-0">v-on</h3>
+</li>
+</ul>
+<p>使用 <span style="color: #800000;">v-on</span> 指令绑定事件监听器</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">v-on:[eventName]</span><span style="color: #0000ff;">="doSomething"</span><span style="color: #0000ff;">&gt;</span> ... <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>示例：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">v-on:click</span><span style="color: #0000ff;">="doSomething"</span><span style="color: #0000ff;">&gt;</span>...<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>简写：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">a </span><span style="color: #ff0000;">@click</span><span style="color: #0000ff;">="doSomething"</span><span style="color: #0000ff;">&gt;</span>...<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">a</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-4-0">v-text</h3>
+</li>
+</ul>
+<p>使用&nbsp;v-text&nbsp;指令输出{{}}里的原文本</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span </span><span style="color: #ff0000;">v-text</span><span style="color: #0000ff;">="msg"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 与下面效果相同 </span><span style="color: #008000;">--&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span>{{msg}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">span</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-5-0">v-show</h3>
+</li>
+</ul>
+<p>使用 <span style="color: #800000;">v-show</span> 指令来根据条件展示元素</p>
+<p>HTML 代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">h1 </span><span style="color: #ff0000;">v-show</span><span style="color: #0000ff;">="ok"</span><span style="color: #0000ff;">&gt;</span>一级标题<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">h1</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    ok: </span><span style="color: #0000ff;">true</span><span style="color: #000000;">
+  }
+})
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 运行结果<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190726152212678-683951054.png" alt="" width="98" height="38"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-6-0">v-model</h3>
+</li>
+</ul>
+<p>使用 <span style="color: #800000;">v-model</span> 指令在 <span style="background-color: #fae8e5;">input</span>、<span style="background-color: #fae8e5;">select</span>、<span style="background-color: #fae8e5;">textarea</span>、<span style="background-color: #fae8e5;">checkbox</span>、<span style="background-color: #fae8e5;">radio</span> 等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值</p>
+<p>HTML 代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">input </span><span style="color: #ff0000;">v-model</span><span style="color: #0000ff;">="message"</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>输入框: {{ message }}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    message: </span><span style="color: #800000;">''</span><span style="color: #000000;">,
+  }
+})
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 运行效果：<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190727171202592-1960077745.gif" alt="" width="128" height="65"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-7-0">v-if</h3>
+</li>
+</ul>
+<p>使用 <span style="color: #800000;">v-if</span> 指令进行条件判断</p>
+<p>HTML 代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p </span><span style="color: #ff0000;">v-if</span><span style="color: #0000ff;">="him"</span><span style="color: #0000ff;">&gt;</span>他<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p </span><span style="color: #ff0000;">v-if</span><span style="color: #0000ff;">="her"</span><span style="color: #0000ff;">&gt;</span>她<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    him: </span><span style="color: #0000ff;">false</span><span style="color: #000000;">,
+    her: </span><span style="color: #0000ff;">true</span><span style="color: #000000;">
+  }
+})
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 运行结果：她</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>与 v-show 的区别在于：v-if 显示隐藏是将 dom 元素整个添加或删除，而 v-show 隐藏则是为该元素添加 display:none，dom 元素还在</p>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-8-0">v-else</h3>
+</li>
+</ul>
+<p>可以用 <span style="color: #800000;">v-else</span> 指令给 v-if 添加一个 "else" 块</p>
+<p>HTML 代码：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-if</span><span style="color: #0000ff;">="him"</span><span style="color: #0000ff;">&gt;</span>他<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-else</span><span style="color: #0000ff;">&gt;</span>她<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    him: </span><span style="color: #0000ff;">false</span><span style="color: #000000;">,
+    her: </span><span style="color: #0000ff;">true</span><span style="color: #000000;">
+  }
+})
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 运行结果：她</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-9-0">v-else-if</h3>
+</li>
+</ul>
+<p><span style="color: #800000;">v-else-if</span> 在 2.1.0 新增，用作 v-if 的 else-if 块（可以链式的多次使用）</p>
+<p>HTML 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-if</span><span style="color: #0000ff;">="him"</span><span style="color: #0000ff;">&gt;</span>他<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-else-if</span><span style="color: #0000ff;">="it"</span><span style="color: #0000ff;">&gt;</span>它<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-else-if</span><span style="color: #0000ff;">="me"</span><span style="color: #0000ff;">&gt;</span>我<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">v-else</span><span style="color: #0000ff;">&gt;</span>她<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    him: </span><span style="color: #0000ff;">false</span><span style="color: #000000;">,
+    it:</span><span style="color: #0000ff;">false</span><span style="color: #000000;">,
+    me:</span><span style="color: #0000ff;">false</span><span style="color: #000000;">,
+    her: </span><span style="color: #0000ff;">true</span><span style="color: #000000;">
+  }
+})
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 运行结果：她</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<ul>
+<li>
+<h3 id="autoid-2-10-0">v-for</h3>
+</li>
+</ul>
+<p>&nbsp;使用 <span style="color: #800000;">v-for</span> 指令来进行循环</p>
+<p>JS 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">new</span><span style="color: #000000;"> Vue({
+  el: </span><span style="color: #800000;">'</span><span style="color: #800000;">#app</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+  data: {
+    names: {
+      me: </span><span style="color: #800000;">'</span><span style="color: #800000;">Winnie</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+      she: </span><span style="color: #800000;">'</span><span style="color: #800000;">Honey</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+      we: </span><span style="color: #800000;">'</span><span style="color: #800000;">Winney</span><span style="color: #800000;">'</span><span style="color: #000000;">
+    }
+  }
+})</span><span style="color: #008000;"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>HTML 代码：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li </span><span style="color: #ff0000;">v-for</span><span style="color: #0000ff;">="value in names"</span><span style="color: #0000ff;">&gt;</span>{{ value }}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 运行结果 </span><span style="color: #008000;">--&gt;<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190726171347101-814737885.png" alt="" width="92" height="78"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>可以提供第二个的参数为键名：</p>
+<p>HTML 代码（注意 key 和 value 的位置）：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li </span><span style="color: #ff0000;">v-for</span><span style="color: #0000ff;">="(value,key) in names"</span><span style="color: #0000ff;">&gt;</span>{{key}}：{{value}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 运行结果 </span><span style="color: #008000;">--&gt;<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190726172006681-1638753258.png" alt="" width="126" height="70"></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;如果有第三个参数，则第三个参数作为为索引</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="app"</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">li </span><span style="color: #ff0000;">v-for</span><span style="color: #0000ff;">="(value,key,index) in names"</span><span style="color: #0000ff;">&gt;</span>{{key}}：{{value}}--{{index}}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">li</span><span style="color: #0000ff;">&gt;</span>
+  <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">ul</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 运行结果 </span><span style="color: #008000;">--&gt;<br><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190726172247981-1023928434.png" alt="" width="156" height="72"></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/Leophen/category/1501536.html" target="_blank">Vue </a></div>
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(11251757,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;ecb3f24d-4c60-47d6-852a-08d6fed0bd7f&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/Leophen/" target="_blank"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/20190718185324.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/Leophen/">Leophen</a><br>
+            <a href="https://home.cnblogs.com/u/Leophen/followees/">关注 - 14</a><br>
+            <a href="https://home.cnblogs.com/u/Leophen/followers/">粉丝 - 16</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;ecb3f24d-4c60-47d6-852a-08d6fed0bd7f&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(11251757,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(11251757,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/Leophen/p/11247668.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/Leophen/p/11247668.html" title="发布于 2019-07-25 23:23">Vue 生命周期</a>
+    <br>
+    <a href="https://www.cnblogs.com/Leophen/p/11253663.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/Leophen/p/11253663.html" title="发布于 2019-07-27 02:13">Vue计算属性和侦听器</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2019-07-26 17:26</span>&nbsp;
+<a href="https://www.cnblogs.com/Leophen/">Leophen</a>&nbsp;
+阅读(<span id="post_view_count">127</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11251757" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(11251757);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 524987, cb_blogApp = 'Leophen', cb_blogUserGuid = 'ecb3f24d-4c60-47d6-852a-08d6fed0bd7f';
+    var cb_entryId = 11251757, cb_entryCreatedDate = '2019-07-26 17:26', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/Leophen/p/11251757.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/Leophen/p/11251757.html#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a>
+     或 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-ucancode&#39;)">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://cloud.tencent.com/act/seckill?fromSource=gwzcw.3498755.3498755.3498755&amp;utm_medium=cpc&amp;utm_id=gwzcw.3498755.3498755.3498755" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-腾讯云&#39;)">【推荐】腾讯云产品限时秒杀，爆款1核2G云服务器99元/年！</a><br><a href="https://ke.qq.com/huodong/kejizhanyi_PC/index.html?from=800025028##tuin=7c4aaece" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-腾讯课堂&#39;)">【推荐】算法总比问题多，科技战「疫」开发者论坛</a><br></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/gpt.js.下载"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block" style="">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;" data-google-query-id="CPSU147p2OgCFYm8lgodApIG4A"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/saved_resource.html"></iframe></div></div>
+    </div>
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="VueAPI3（模板语法，指令）" href="https://www.cnblogs.com/yaokai729/p/11420237.html" target="_blank" onclick="clickRecomItmem(11420237)">VueAPI3（模板语法，指令）</a><br>·  <a title="【Vue常用指令】" href="https://www.cnblogs.com/zyk01/p/11376122.html" target="_blank" onclick="clickRecomItmem(11376122)">【Vue常用指令】</a><br>·  <a title="vue指令总结（二）" href="https://www.cnblogs.com/nylcy/p/9497815.html" target="_blank" onclick="clickRecomItmem(9497815)">vue指令总结（二）</a><br>·  <a title="VUE常用指令" href="https://www.cnblogs.com/chenyibai/p/9922168.html" target="_blank" onclick="clickRecomItmem(9922168)">VUE常用指令</a><br>·  <a title="【Vue常用指令】򆎱" href="https://www.cnblogs.com/agsaa/p/11368061.html" target="_blank" onclick="clickRecomItmem(11368061)">【Vue常用指令】򆎱</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/blogpost/11251757">更多推荐...</a></div></div>
+    <div id="cnblogs_c2" class="c_ad_block" style="">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CPWU147p2OgCFYm8lgodApIG4A">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none; width: 468px; height: 60px;"></div></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    <section id="theinfo" style="background: #f9f9fb; padding: 20px">
+    <article id="theclosebtn" style="position: relative; left: -9px; top: -6px; height: 14px; width: 70px; margin-bottom: 20px">
+        <div style="width: 14px; height: 14px; background: #ed6a5e; position: relative; left: 3px; top: 0px">
+            <p style="font-weight: 300; font-size: 18px; color: #8c1a10; position: relative; left: 2.5px; top: -2.7px; z-index: -1; cursor: default">+</p>
+        </div>
+        <div style="width: 14px; height: 14px; background: #f5bf50; position: relative; left: 26px; top: -14px">
+            <p style="font-weight: 300; font-size: 25px; color: #7b5b1a; position: relative; left: 2px; top: -9px; z-index: -1; cursor: default">-</p>
+        </div>
+        <div style="width: 14px; height: 14px; background: #8fbf60; position: relative; left: 49px; top: -28px">
+            <img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190819213335394-875144371.png" style="width: 14px; height: 14px; position: relative; top: -5px; z-index: -1">
+        </div>
+    </article>
+
+    <div>
+        <a href="https://www.cnblogs.com/Leophen/"><img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190817181416556-1563844991.png" id="theimg" style="position: relative; left: 50%; margin-left: -50px"></a>
+    </div>
+    <div style="padding-bottom: 10px">
+        <img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190817172621364-790201841.png" style="position: relative; top: 4px">
+        <a style="margin-left: 10px; cursor: default">Web前端开发</a>
+    </div>
+    <div>
+        <img src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/1731684-20190817162814933-852295828.png" style="position: relative; top: 5px">
+        <a href="https://github.com/Leophen" style="margin-left: 10px" target="_blank">github.com/Leophen</a>
+    </div>
+</section>
+
+<script type="text/javascript">window['__document_write_ajax_callbacks__']['3']();</script><script type="text/javascript">window['__document_write_ajax_callbacks__']['1']();</script>
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/Leophen/">
+            Leophen
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/Leophen/" title="入园时间：2019-07-02">
+            9个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/Leophen/followers/">
+            16
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/Leophen/followees/">
+            14
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;ecb3f24d-4c60-47d6-852a-08d6fed0bd7f&#39;)">+加关注</a></div>
+        <script type="text/javascript">window['__document_write_ajax_callbacks__']['4']();</script><script>window['__document_write_ajax_callbacks__']['2']();</script>
+    </div>
+</div>
+
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    
+</div>
+
+<!-- 常用链接 -->
+
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+            <h3 class="catListTitle">
+                
+
+随笔分类
+
+
+
+            </h3>
+
+
+            <ul>
+
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1506498.html" rel="" target="">
+    Ajax (7)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495350.html" rel="" target="">
+    BootStrap (1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1506499.html" rel="" target="">
+    Canvas 
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495347.html" rel="" target="">
+    CSS3 (17)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1501535.html" rel="" target="">
+    ECMAScript 6 (12)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495346.html" rel="" target="">
+    HTML5 (9)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1527585.html" rel="" target="">
+    HTTP (1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495348.html" rel="" target="">
+    JavaScript (38)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495349.html" rel="" target="">
+    jQuery (2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495351.html" rel="" target="">
+    LESS (3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1529611.html" rel="" target="">
+    Node.js 
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1501537.html" rel="" target="">
+    React (11)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1495352.html" rel="" target="">
+    SASS (1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1526116.html" rel="" target="">
+    SEO (1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1530058.html" rel="" target="">
+    Sketch
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1529610.html" rel="" target="">
+    TypeScript 
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1501536.html" rel="" target="">
+    Vue (14)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Leophen/category/1526617.html" rel="" target="">
+    Z-Others(13)
+</a>
+ 
+
+                        </li>
+
+            </ul>
+
+
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    <div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11134844.html">
+                            1. 通过CDN引入jQuery的几种方式(10948)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11265833.html">
+                            2. Vue路由实现页面跳转的两种方式（router-link和JS）(10437)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11397731.html">
+                            3. 常见排序算法的稳定性分析(2409)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11397621.html">
+                            4. SQL模糊查询的四种匹配模式(2022)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11343539.html">
+                            5. 通过mock-api模拟真实数据(1775)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11343550.html">
+                            6. React使用axios请求并渲染数据(1141)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11332634.html">
+                            7. React组件库Ant Design的安装与使用(1044)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11286236.html">
+                            8. error: invalid-first-character-of-tag-name错误解决方案(884)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11401734.html">
+                            9. JavaScript实现继承的6种方式(773)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11140621.html">
+                            10. JavaScript正则表达式(736)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11276414.html">
+                            11. Vue移动组件库Mint UI的安装与使用(710)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11541205.html">
+                            12. mac 使用 brew 安装 nginx 及各种命令(703)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11126286.html">
+                            13. CSS3常用选择器(607)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11204567.html">
+                            14. JavaScript（ES6之前）数组方法总结(606)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11405579.html">
+                            15. 关于DOM事件流、DOM0级事件与DOM2级事件(597)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11125919.html">
+                            16. HTML5新增的表单验证功能(574)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11264742.html">
+                            17. Vue过渡效果的实现(556)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11397699.html">
+                            18. 页面置换算法详解(530)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11399277.html">
+                            19. KMP算法的时间复杂度与next数组分析(489)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/Leophen/p/11359508.html">
+                            20. CSS盒子模型的理解及其计算方式汇总(483)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 评论排行榜 -->
+
+
+<!-- 推荐排行榜 -->
+</div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2020 Leophen
+<br><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/bootstrap.min.js.下载"></script>
+
+<script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/jquery-migrate-1.2.1.js.下载"></script>
+<div id="scrollTop" style="display: none;">
+      <div class="level-2" style="opacity: 0; display: block;"></div>
+      <div class="level-3"></div>
+</div>
+<script src="./Vue模板语法与常用指令总结 - Leophen - 博客园.md_files/scroll2top.js.下载"></script>
+<script type="text/javascript">
+    UI.global_search();
+    var uvOptions = {};
+    // !important
+    (function() {
+        initScrollTop();
+    })();
+</script>
+    </div>
+
+<script type="text/javascript">
+//以下是锚点JS
+var a = $(document);
+a.ready(function() {
+  var b = $('body'),
+    d = 'sideToolbar',
+    e = 'sideCatalog',
+    f = 'sideCatalog-catalog',
+    g = 'sideCatalogBtn',
+    h = 'sideToolbar-up',
+    i = '<div id="sideToolbar"style="display:none;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-catalog">\<ul class="nav"style="width:225px;zoom:1;padding-bottom:20px;">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
+    j = '',
+    k = 100,
+    l = 0,
+    m = 0,
+    n = 0,
+    //限制存在个数，如数量过多，则只显示h2，不显示h3
+    //o, p = 13,
+    o, p = 100,
+    q = true,
+    r = true,
+    s = b;
+  if(s.length === 0) {
+    return
+  };
+  b.append(i);
+  o = $('#cnblogs_post_body').find(':header')
+  if(o.length > p) {
+    r = false;
+    var t = s.find('h2');
+    var u = s.find('h3');
+    if(t.length + u.length > p) {
+      q = false
+    }
+  };
+  o.each(function(t) {
+    var u = $(this),
+      v = u[0];
+
+    var title = u.text();
+    var text = u.text();
+
+    u.attr('id', 'autoid-' + l + '-' + m + '-' + n)
+
+    if(v.localName === 'h2') {
+      l++;
+      m = 0;
+      if(text.length > 14) text = text.substr(0, 20) + "...";
+      j += '<li><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
+    } else if(v.localName === 'h3') {
+      m++;
+      n = 0;
+      if(q) {
+        if(text.length > 12) text = text.substr(0, 16) + "...";
+        j += '<li class="h2Offset"><span>' + '&nbsp&nbsp</span><a href="#' + u.attr('id') + '" title="' + title + '">' + text + '</a></li>';
+      }
+    } else if(v.localName === 'h4') {
+      n++;
+      if(r) {
+        j += '<li class="h3Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + u.text() + '</a></li>';
+      }
+    }
+  });
+  $('#' + f + '>ul').html(j);
+  b.data('spy', 'scroll');
+  b.data('target', '.sideCatalogBg');
+  $('body').scrollspy({
+    target: '.sideCatalogBg'
+  });
+  $sideCatelog = $('#' + e);
+  $('#' + g).on('click', function() {
+    if($(this).hasClass('sideCatalogBtnDisable')) {
+      $sideCatelog.css('visibility', 'hidden')
+    } else {
+      $sideCatelog.css('visibility', 'visible')
+    };
+    $(this).toggleClass('sideCatalogBtnDisable')
+  });
+  $('#' + h).on('click', function() {
+    $("html,body").animate({
+      scrollTop: 0
+    }, 500)
+  });
+  $sideToolbar = $('#' + d);
+
+  //通过判断评论框是否存在显示索引目录
+  var commentDiv = $("#blog-comments-placeholder");
+
+  a.on('scroll', function() {
+    //评论框存在才调用方法
+    if(commentDiv.length > 0) {
+      var t = a.scrollTop();
+      if(t > k) {
+        $sideToolbar.css('display', 'block');
+        $('#gotop').show()
+      } else {
+        $sideToolbar.css('display', 'none')
+        $('#gotop').hide()
+      }
+    }
+  })
+});
+</script><div id="sideToolbar" style="display: block;"><div class="sideCatalogBg" id="sideCatalog"><div id="sideCatalog-catalog"><ul class="nav" style="width:225px;zoom:1;padding-bottom:20px;"><li class="active"><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-0-0-0" title="一、插值">一、插值</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-1-0-0" title="1、文本">1、文本</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-1-1-0" title="2、HTML">2、HTML</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-1-2-0" title="3、属性">3、属性</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-1-3-0" title="4、JavaScript 表达式">4、JavaScript 表达式...</a></li><li class=""><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-1-4-0" title="二、常用指令">二、常用指令</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-0-0" title="v-once">v-once</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-1-0" title="v-html">v-html</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-2-0" title="v-bind">v-bind</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-3-0" title="v-on">v-on</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-4-0" title="v-text">v-text</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-5-0" title="v-show">v-show</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-6-0" title="v-model">v-model</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-7-0" title="v-if">v-if</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-8-0" title="v-else">v-else</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-9-0" title="v-else-if">v-else-if</a></li><li class="h2Offset"><span>&nbsp;&nbsp;</span><a href="https://www.cnblogs.com/Leophen/p/11251757.html#autoid-2-10-0" title="v-for">v-for</a></li></ul></div></div><a href="javascript:void(0);" id="sideCatalogBtn" class="sideCatalogBtnDisable"></a></div><script type="text/javascript">getFollowStatus('ecb3f24d-4c60-47d6-852a-08d6fed0bd7f');</script></body></html>

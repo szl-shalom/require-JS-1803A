@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 500px;
+    margin: auto;
+}
+
+.title span {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+}
+
+.title span.active {
+    background: red;
+    color: #fff;
+}
+
+.title span.active1 {
+    background: green;
+    color: #fff;
+}
+
+.title span.active2 {
+    background: tomato;
+    color: #fff;
+}
+
+.content > div {
+    display: none;
+}
+.content > div.active {
+    display: block;
+}
+
+.content > div.active1 {
+    display: block;
+}
+
+.underLine {
+    width: 68px;
+    height: 2px;
+    display: block;
+    background: violet;
+    transition: margin-left .3s;
+}
+
+.tab4{
+    position: relative;
+}
